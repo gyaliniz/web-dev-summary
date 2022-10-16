@@ -1,2 +1,6 @@
 js/10_api_call/node_modules
 js/10_api_call/package-lock.json
+
+tailwind-css/node_modules
+tailwind-css/package-lock.json
+tailwind-css/.DS_Store

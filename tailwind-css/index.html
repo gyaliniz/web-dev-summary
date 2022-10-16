@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+    <nav class="relative container mx-auto p-6"></nav>
+
+    <!-- To create a child element with absolute positioning -->
+    <div class="relative h-32 bg-blue-200">
+        <p>Relative Parent</p>
+        <div class="absolute right-0 bottom-0">
+            Absolute Child
+        </div>
+    </div>
+
+    <!-- container block with margin on x axis with padding 1.5rem -->
+    <div class="container mx-auto p-6">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores soluta porro nesciunt, dolore tenetur, voluptas quaerat suscipit aut, est illum eveniet iure? Recusandae ullam suscipit laudantium aliquam facilis! In, facere.
+    </div>
+
+    <!-- create a flex spreaded to the row-->
+    <div class="flex items-center justify-between">
+        <div class="w-32 h-32 bg-blue-200"></div>
+        <div class="w-32 h-32 bg-blue-200"></div>
+        <div class="w-32 h-32 bg-blue-200"></div>
+    </div>
+
+    <!--  put padding top, and hide until reaching medium position-->
+    <div class="pt-6 hidden items-center justify-between md:flex">
+        <div class="w-32 h-32 bg-blue-200"></div>
+        <div class="w-32 h-32 bg-blue-200"></div>
+        <div class="w-32 h-32 bg-blue-200"></div>
+    </div>
+
+    <div class="p-6 space-x-32 md:flex">
+        <a href="" class="hover:text-lime-500">Home</a>
+        <a href="" class="hover:text-violet-500">Contact</a>
+        <a href="" class="hover:text-red-400">About</a>
+    </div>
+
+    <a href="" class="mb-12 py-3 px-6 bg-red-500 text-white rounded-full hover:bg-red-400">Get Started</a>
+
+    <div class="mt-6 w-1/2">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis dolorem nobis architecto labore deserunt optio aliquam? Possimus, quaerat unde deserunt reiciendis aperiam magnam, eum illum ullam provident id, suscipit vero.
+    </div>
+
+    <div class="mt-6 max-w-md">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Non nulla culpa aspernatur tempore. Reiciendis blanditiis eligendi fuga eum, culpa quidem illum et? Harum at reprehenderit odit eius blanditiis, perferendis ad.
+    </div>
+
+    <div class="w-32 h-32 m-6 bg-black hover:bg-transparent"></div>
+
+    <input class="bg-gray-200 rounded-full text-black px-6 py-2 m-3 focus:outline-dashed" placeholder="Test">
+
+    <script src="js/script.js"></script>
+</body>
+</html>
