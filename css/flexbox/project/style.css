@@ -111,7 +111,7 @@ img {
   /* vertical | horizontal */
   margin: 20px 20px;
   /* offset-x | offset-y | blur-radius | color */
-  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.6);
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.6);
   padding: 20px 10px;
   text-align: center;
   /* Use flex inside of boxes as well*/
