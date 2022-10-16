@@ -16,7 +16,7 @@
 body {
   font-family: 'Poppins', sans-serif;
   font-size: 18px;
-  line-height: 1.5px;
+  line-height: 1.5em;
   background-color: rgb(230, 230, 230);
 }
 
@@ -25,6 +25,7 @@ body {
   height: 60px;
   color: #fff;
 }
+
 /* Apply flex to navbar nav: Home, About, Contact */
 .navbar ul {
   display: flex;
@@ -81,15 +82,20 @@ h1, h2, p {
   line-height: 1.5;
 }
 
+/* header section flexbox item settings*/
 .header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-/* limit size of*/
+/* limit size of iamges*/
 .header img {
   max-width: 400px;
+}
+
+img {
+  max-width: 100%;
 }
 
 .boxes .container {
@@ -108,17 +114,17 @@ h1, h2, p {
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.6);
   padding: 20px 10px;
   text-align: center;
+  /* Use flex inside of boxes as well*/
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-img {
-  max-width: 100%;
-}
-
+/* Responsive Design 
+  Update css for small screen sizes
+*/
 @media screen and (max-width:768px){
-  /*  change the direction of the flex*/
+  /* change the direction of the flex */
   .header .container {
     flex-direction: column;
     text-align: center;
