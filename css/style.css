@@ -6,6 +6,7 @@ body {
 a {
     text-decoration: none;
 }
+
 /* for classes use . before items' class name */
 .boxes {
     /* property: value; */
@@ -72,7 +73,7 @@ div#idname      div with certain ID
     line-height: 18px;
 }
 
-div p {
+#selector-example div p {
     font-family: 'Courier New', Courier, monospace;
 }
 
@@ -81,11 +82,11 @@ div ~ p {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-div > p {
+#selector-example div > p {
     color: darkgoldenrod;
 }
 
-div + p {
+#selector-example div + p {
     color: blueviolet;
 }
 
@@ -111,6 +112,15 @@ a:hover {
 }
 
 a:active {
+    color: #333;
+}
+
+#block-text {
+    border-left: teal 2px solid;
+    border-top: darkviolet 3px dashed;
+    border-right: turquoise 5px double;
+    border-bottom: goldenrod 8px ridge;
+    background-color: whitesmoke;
     color: #333;
 }
 
