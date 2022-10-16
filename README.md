@@ -7,3 +7,4 @@ This collection expects you to have basic-level web development experience. When
 | Topic      | Folders to Review |
 | ---------- | ----------------- |
 | Javascript | js                |
+| CSS        | css               |
