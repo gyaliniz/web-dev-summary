@@ -1,7 +1,7 @@
 // prefer const whenever possible
 const PI = 3.14
 
-// use var for global variables
+// use var for global variables - function level
 
 var userName = "Jason"
 
@@ -15,6 +15,7 @@ if (userName === "Mathew") {
 // define function
 const myFunction = function () {
     // use let for local variables
+    // attacted to the next curly braces
     let lengthOfUserName = userName.length // 6
 
     console.log(`The length before changing username: ${lengthOfUserName}`);
