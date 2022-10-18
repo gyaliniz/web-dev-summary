@@ -102,3 +102,9 @@ console.log(myCars);
   { type: 'Mercedes', year: 2009 }
 ]
 */
+
+// Check if array has the item
+arr = [2, 2, 3, 4]
+if(arr.indexOf(1) !== -1) {
+    console.log(`It includes 1`)
+} 

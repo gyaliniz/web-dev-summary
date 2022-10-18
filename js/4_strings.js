@@ -23,3 +23,10 @@ console.log(newDestination);
 // split input string at matched indexes
 console.log(travelStr.split(' '));
 console.log(travelStr.split(''));
+
+
+const strTemp = `This is a test
+
+and the last part of the text is here`;
+console.log(strTemp); 
+// with template literal we can create multi line strings

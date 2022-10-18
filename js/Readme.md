@@ -83,3 +83,103 @@ delete person.age;
 
 ## Functions are Objects
 
+
+## Templeate Literals
+
+```js
+const strTemp = `This is a test
+
+
+
+and the last part of the text is here`;
+console.log(strTemp); 
+// with template literal we can create multi line strings
+
+```
+
+## Check if array has the item
+
+```js
+arr = [1, 2, 3, 4]
+if(arr.indexOf(1) !== -1) {
+    console.log(`It includes 1`)
+}
+
+```
+
+## Hosting 
+
+Hosting is moving function decleration to the top of the file.
+
+This is done by JS Engine.
+
+
+
+## Variant Function Parameters
+
+```js
+// argument var passes all parameters given in a function call
+function sum(a, b) {
+    for(let value of arguments) {
+        console.log(value);
+    }
+}
+
+sum(1, 2, 3, 4, 5)
+
+// rest operator
+
+function sumWithRest(...args) {
+    for(let value of args) {
+        console.log(value);
+    }
+}
+
+sumWithRest(6, 7, 8, 9)
+```
+
+
+## Function with Default Params
+
+
+```js
+
+function getResult(count, factor = 2) {
+  return count * factor;
+}
+
+console.log(getResult(2))
+
+console.log(getResult(3, 5))
+```
+
+
+# Getters and Setters
+
+```js
+const car = {
+    brand: "BMW",
+    model: "X5",
+
+    get fullModel() {
+        return `${this.brand} : ${this.model}`
+    },
+
+    set fullModel(value) {
+        const parts = value.split(':');
+        this.brand = parts[0];
+        this.model = parts[1];
+    }
+}
+
+console.log(car.fullModel)
+// logs: BMW : X5
+car.fullModel = "Volvo : XC40"
+
+console.log(car.fullModel);
+// logs: Volvo  :  XC40
+
+```
+
+* Arrow functions inherit this from containing function
+* Regular functions inherit this from the global object

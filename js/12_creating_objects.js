@@ -40,3 +40,24 @@ person.showInfo = function () {
 }
 
 person.showInfo()
+
+
+// Person.call({}, 'alex')
+// Person.apply({}, [1, 2, 3])
+
+console.log("Object assign");
+
+// copying object 1
+const anotherPerson = Object.assign({}, person);
+
+for (const key in anotherPerson) {
+    if (Object.hasOwnProperty.call(anotherPerson, key)) {
+        const element = anotherPerson[key];
+        console.log(element);
+    }
+}
+
+// copying object 2: spread operator
+const copiedAnother = {...person};
+
+console.log(copiedAnother);

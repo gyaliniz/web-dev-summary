@@ -25,8 +25,17 @@ const car = {
         console.log(this.model);
         console.log(this.color);
         console.log(this.weight);
-    }
+    },
 
+    get fullModel() {
+        return `${this.brand} : ${this.model}`
+    },
+
+    set fullModel(value) {
+        const parts = value.split(':');
+        this.brand = parts[0];
+        this.model = parts[1];
+    }
 }
 
 // object is a collection of methods and properties
@@ -45,3 +54,9 @@ car.drive()
 car.brake()
 car.stop()
 
+console.log(car.fullModel)
+// logs: BMW : X5
+car.fullModel = "Volvo : XC40"
+
+console.log(car.fullModel);
+// logs: Volvo  :  XC40
