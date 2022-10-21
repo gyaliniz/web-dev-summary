@@ -18,6 +18,7 @@ henry.showName()
 
 
 // constructor function 
+// prefer to use class
 function Person(name) {
     this.name = name // binding
 

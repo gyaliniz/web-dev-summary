@@ -76,3 +76,19 @@ console.log(writer instanceof Author); // true
 console.log(writer.constructor === User); // false
 console.log(writer.constructor === Author); // true
 
+
+
+class Car {
+    constructor(model) {
+        this.model = model;
+    }
+}
+
+Car.prototype.getInfo = function() {
+    console.log(this.model);
+}
+
+const car = new Car('BMW');
+
+car.getInfo();
+

@@ -107,11 +107,23 @@ if(arr.indexOf(1) !== -1) {
 
 ```
 
-## Hosting 
+## Hoisting 
 
-Hosting is moving function decleration to the top of the file.
+Hoisting is moving function decleration to the top of the file.
+
+```js
+function hoistedFunction () {
+    
+}
+```
 
 This is done by JS Engine.
+
+!!! Function Expressions are not moved to top of the file.
+
+```js
+const testFun = function() {}
+```
 
 
 
@@ -181,5 +193,81 @@ console.log(car.fullModel);
 
 ```
 
+## Dynamic Property Updates
+
+
+```js
+// Dynamicalling deleting adding property to an object
+console.log(car.weight);
+delete car.weight;
+console.log(car.weight);
+
+car.weight = '1234 kg'
+console.log('car.weight :>> ', car.weight);
+
+/*
+2000kg
+undefined
+car.weight :>>  1234 kg
+*/
+```
+
+## Enumareting Properties
+
+```js
+for(let key in car) {
+    if(typeof car[key] !== 'function') {
+        console.log(car[key]);
+    }
+}
+
+if('weight' in car) {
+    console.log('car has weight property');
+}
+
+```
+
+## Adding new property/Method to a class
+
+```js
+class Car {
+    constructor(model) {
+        this.model = model;
+    }
+}
+
+Car.prototype.getInfo = function() {
+    console.log(this.model);
+}
+
+const car = new Car('BMW');
+
+car.getInfo();
+```
+
+
+```js
+const car = {
+    model: 'BMW',
+    features: ['CarPlay', 'Rear Camera', 'Fast Charge'],
+
+    showFeatures() {
+        this.features.forEach(function(feature) {
+            console.log(this, feature)
+            // this is from the global object
+        })
+    },
+
+    showFeatures2() {
+        this.features.forEach((feature)=> {
+            console.log(this, feature)
+            // this is from the containing function
+        })
+    }
+}
+```
+* Regular callback functions inherit this from the global object
+
 * Arrow functions inherit this from containing function
-* Regular functions inherit this from the global object
+
+

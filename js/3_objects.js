@@ -60,3 +60,33 @@ car.fullModel = "Volvo : XC40"
 
 console.log(car.fullModel);
 // logs: Volvo  :  XC40
+
+console.log('--------Dynamicalling deleting adding property to an object');
+
+// 
+console.log(car.weight);
+delete car.weight;
+console.log(car.weight);
+
+car.weight = '1234 kg'
+console.log('car.weight :>> ', car.weight);
+
+/*
+2000kg
+undefined
+car.weight :>>  1234 kg
+*/
+
+
+
+// Enumareting Properties
+console.log('--------Enumareting Properties');
+for(let key in car) {
+    if(typeof car[key] !== 'function') {
+        console.log(car[key]);
+    }
+}
+
+if('weight' in car) {
+    console.log('car has weight property');
+}
